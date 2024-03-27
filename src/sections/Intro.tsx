@@ -8,9 +8,9 @@ const Intro: React.FC = () => {
       </div>
       <div className="text-center mb-8">
         <p className="text-lg text-gray-800">
-          Hi, I'm John Doe, a passionate software engineer with a focus on building
-          robust and scalable applications. With over 5 years of experience in the
-          industry, I've worked with various companies on a range of projects, always striving for excellence in both code quality and user experience.
+          Hi, I&apos;m Justin Korkie, a passionate software engineer with a focus on building
+          robust and scalable applications. With 5 years of experience in the
+          industry, I&apos;ve worked with various technologies on a range of projects, always striving for excellence in both code quality and user experience.
         </p>
       </div>
     </>
