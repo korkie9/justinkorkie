@@ -1,4 +1,3 @@
-
 interface NavProps {
   changeSection: (section: string) => void;
 }

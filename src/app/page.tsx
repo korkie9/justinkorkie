@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import WorkExperience from '../sections/WorkExperience';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/index';
 import Editors from '../sections/Editors';
 import Intro from '../sections/Intro';
 import { motion } from 'framer-motion';
