@@ -141,7 +141,7 @@ const WorkExperiences: React.FC = () => {
                       <ul>
                         {selectedProject.stack.map((item: string) => {
                           return (
-                            <li className='text-gray-800'>{item}</li>
+                            <li key={item} className='text-gray-800'>{item}</li>
                           )
                         })}
                       </ul>
