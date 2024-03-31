@@ -1,18 +1,21 @@
+import { Home, Clipboard, Edit } from 'react-feather';
+
 interface NavProps {
   changeSection: (section: string) => void;
 }
 const Navbar: React.FC<NavProps> = ({ changeSection }: NavProps) => {
+
   return (
-    <nav className="hidden lg:block w-1/6 bg-gray-800 p-4 text-white">
-      <ul className='flex flex-col gap-8'>
+    <nav className="flex justify-center items-center lg:block lg:w-1/6 bg-gray-800 p-4 text-white">
+      <ul className='flex flex-row lg:flex-col w-full h-full justify-center items-center gap-8'>
         <li className="mb-2">
-          <a href="#intro" className="block hover:text-blue-400" onClick={() => changeSection('intro')}>Intro</a>
+          <a href="#intro" className="block hover:text-blue-400" onClick={() => changeSection('intro')}><Home /></a>
         </li>
         <li className="mb-2">
-          <a href="#work-experience" className="block hover:text-blue-400" onClick={() => changeSection('experience')}>Experience</a>
+          <a href="#work-experience" className="block hover:text-blue-400" onClick={() => changeSection('experience')}><Clipboard /></a>
         </li>
         <li className="mb-2">
-          <a href="#editors" className="block hover:text-blue-400" onClick={() => changeSection('editors')}>Editors</a>
+          <a href="#editors" className="block hover:text-blue-400" onClick={() => changeSection('editors')}><Edit /></a>
         </li>
       </ul>
     </nav>

@@ -4,6 +4,7 @@ import WorkExperience from '../sections/WorkExperience';
 import Navbar from '../components/Navbar/index';
 import Editors from '../sections/Editors';
 import Intro from '../sections/Intro';
+import Socials from '../sections/Socials'
 import { motion } from 'framer-motion';
 
 const Home: React.FC = () => {
@@ -15,16 +16,16 @@ const Home: React.FC = () => {
 
   return (
 
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-400 to-indigo-600">
+    <div className="flex flex-col min-h-screen items-center justify-center bg-gradient-to-r from-blue-400 to-indigo-600 p-4">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="max-w-screen-md mx-auto bg-white bg-opacity-80 shadow-lg rounded-lg w-full"
+        className=" max-w-screen-md mx-auto bg-white bg-opacity-80 shadow-lg rounded-lg w-full"
       >
-        <div className="h-96 flex">
+        <div className="flex flex-col lg:flex-row">
           <Navbar changeSection={handleSectionChange} />
-          <div id="intro" className={activeSection === 'intro' ? 'w-full h-full' : 'hidden'}>
+          <div id="intro" className={activeSection === 'intro' ? 'w-full h-1/2' : 'hidden'}>
             <Intro />
           </div>
           <div id="work-experience" className={activeSection === 'experience' ? 'w-full h-full' : 'hidden'}>
@@ -33,6 +34,15 @@ const Home: React.FC = () => {
           <div id="editors" className={activeSection === 'editors' ? 'w-full h-full' : 'hidden'}>
             <Editors />
           </div>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className='mt-8'>
+          <Socials />
         </div>
       </motion.div>
     </div>
