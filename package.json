@@ -11,14 +11,23 @@
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.2.3",
     "@types/feather-icons": "^4.29.4",
+    "@types/mdx": "^2.0.13",
     "feather-icons": "^4.29.1",
     "framer-motion": "^11.0.22",
+    "github-markdown-css": "^5.5.1",
+    "gray-matter": "^4.0.3",
     "next": "14.1.4",
+    "next-mdx-remote": "^5.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-feather": "^2.0.10",
-    "react-icons": "^5.0.1"
+    "react-icons": "^5.0.1",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -15,7 +15,7 @@ const Navbar: React.FC<NavProps> = ({ changeSection }: NavProps) => {
           <a href="#work-experience" className="block hover:text-blue-400" onClick={() => changeSection('experience')}><Clipboard /></a>
         </li>
         <li className="mb-2">
-          <a href="#editors" className="block hover:text-blue-400" onClick={() => changeSection('editors')}><Edit /></a>
+          <a href="#blogs" className="block hover:text-blue-400" onClick={() => changeSection('blogs')}><Edit /></a>
         </li>
       </ul>
     </nav>

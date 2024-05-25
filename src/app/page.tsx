@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import WorkExperience from '../sections/WorkExperience';
 import Navbar from '../components/Navbar/index';
-import Editors from '../sections/Editors';
+import Blogs from '../sections/Blogs';
 import Intro from '../sections/Intro';
 import Socials from '../sections/Socials'
 import { motion } from 'framer-motion';
@@ -31,8 +31,8 @@ const Home: React.FC = () => {
           <div id="work-experience" className={activeSection === 'experience' ? 'w-full h-full' : 'hidden'}>
             <WorkExperience />
           </div>
-          <div id="editors" className={activeSection === 'editors' ? 'w-full h-full' : 'hidden'}>
-            <Editors />
+          <div id="blogs" className={activeSection === 'blogs' ? 'w-full h-full' : 'hidden'}>
+            <Blogs />
           </div>
         </div>
       </motion.div>
