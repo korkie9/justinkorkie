@@ -1,7 +1,7 @@
 
 # Text Editor
 
-I've used a good number of text editors till now, most for nothing more than a 'world app'. There are a select few however that I've used long term and feel speacking on. Allow me to give you my history with Text editors and my thoughts on them. All my opinions on this are obviously purely subjective (except for neovim, the literal 🐐)
+I've used a good number of text editors till now, most for nothing more than a 'hello world' app. There are a select few however that I've used long term and feel confident speaking on. Allow me to give you my history with Text editors and my thoughts on them. All my opinions on this are obviously purely subjective (except for **neovim** , the literal 🐐)
 
 ### [RAD Studio](https://www.embarcadero.com/products/rad-studio)
 We all had to start somewhere. For me it was grade 10 IT class. The CAPS education system had just phased out Java and we were taught Delphi. The editor of choice naturally, RAD.
