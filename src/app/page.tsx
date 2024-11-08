@@ -23,15 +23,15 @@ const Home: React.FC = () => {
         transition={{ duration: 0.5 }}
         className=" max-w-screen-md mx-auto bg-white bg-opacity-80 shadow-lg rounded-lg w-full"
       >
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row min-h-96">
           <Navbar changeSection={handleSectionChange} />
-          <div id="intro" className={activeSection === 'intro' ? 'w-full h-1/2' : 'hidden'}>
+          <div id="intro" className={activeSection === 'intro' ? 'w-full' : 'hidden'}>
             <Intro />
           </div>
-          <div id="work-experience" className={activeSection === 'experience' ? 'w-full h-full' : 'hidden'}>
+          <div id="work-experience" className={activeSection === 'experience' ? 'w-full' : 'hidden'}>
             <WorkExperience />
           </div>
-          <div id="blogs" className={activeSection === 'blogs' ? 'w-full h-full' : 'hidden'}>
+          <div id="blogs" className={activeSection === 'blogs' ? 'w-full ' : 'hidden'}>
             <Blogs />
           </div>
         </div>
