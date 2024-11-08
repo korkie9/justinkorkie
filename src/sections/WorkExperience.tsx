@@ -139,7 +139,7 @@ const WorkExperiences: React.FC = () => {
                     <ul className="flex mt-4 flex-col">
                       {selectedProject.links.map((item: Link) => {
                         return (
-                          <a href={item.link} className=" text-blue-700">{item.title}</a>
+                          <a key={item.title} href={item.link} className=" text-blue-700">{item.title}</a>
                         )
                       })}
                     </ul>
