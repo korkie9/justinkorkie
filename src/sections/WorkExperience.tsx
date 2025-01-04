@@ -78,7 +78,7 @@ const WorkExperiences: React.FC = () => {
       companyName: 'Personal',
       projects: [
         {
-          id: 9,
+          id: 7,
           title: 'Skate or Dice',
           description: "This was the first app I ever launched to the play store. It was a digitized version of the skate dice. The concept is that one would 'roll' the dice and based on how the dice land a skate trick would be produced from the outcome. It has since been taken down but as my first Play Store app, it is something I am proud of.",
           links: []
@@ -89,7 +89,7 @@ const WorkExperiences: React.FC = () => {
       companyName: 'Personal',
       projects: [
         {
-          id: 9,
+          id: 8,
           title: 'Open source Projects',
           description: "I have many hobby projects, some of which are open source. I find it fulfilling to know things I create may benifit others even if in small ways. You can find them on my public Github profile.",
           links: [{ title: "Github profile", link: "https://github.com/korkie9" }, { link: "https://crates.io/crates/zmove", title: "Crate Package" }, { link: "https://crates.io/crates/zcopy", title: "Crate Package" }]
