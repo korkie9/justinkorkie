@@ -17,14 +17,14 @@ const Home: React.FC = () => {
   return (
 
     <div className="flex flex-col min-h-screen items-center justify-between bg-gradient-to-r from-yellow-600 to-black-800 p-4">
-      <Navbar changeSection={handleSectionChange} />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className=" max-w-screen-md mx-auto bg-opacity-80 shadow-lg rounded-lg w-full"
+        className=" max-w-screen-md mx-auto bg-opacity-80  w-full"
       >
-        <div className="flex flex-col lg:flex-row min-h-96 w-128">
+        <Navbar changeSection={handleSectionChange} />
+        <div className="flex flex-col lg:flex-row min-h-96 w-128 shadow-lg rounded-lg mt-16">
           <div id="intro" className={activeSection === 'intro' ? 'w-full' : 'hidden'}>
             <Intro />
           </div>

@@ -22,7 +22,8 @@ type Link = {
 
 interface Experience {
   companyName: string,
-  projects: Project[]
+  projects: Project[],
+  isProfessional: boolean
 }
 const WorkExperiences: React.FC = () => {
   const workExperiences: Experience[] = [
@@ -33,9 +34,10 @@ const WorkExperiences: React.FC = () => {
           id: 1,
           title: 'BitCube internship',
           description: 'During the height of Covid I started my 3 month internship at Bitcube. During this time, I worked with .Net core (C#) and Angular.',
-          links: []
+          links: [],
         },
-      ]
+      ],
+      isProfessional: true
     },
     {
       companyName: 'SovTech (Graduate)',
@@ -55,7 +57,8 @@ const WorkExperiences: React.FC = () => {
           },
           ]
         },
-      ]
+      ],
+      isProfessional: true
     },
     {
       companyName: 'SovTech (Software Engineer)',
@@ -78,7 +81,8 @@ const WorkExperiences: React.FC = () => {
           description: "Chartered Solutions requested a platform similar to Offerzen but targeted to accountants. It was a progressive web app. For this app I did full feature implementatiion, testing and third-party integration.",
           links: [{ title: "Company Website", link: "https://chartered-solutions.co.uk/" }]
         },
-      ]
+      ],
+      isProfessional: true
     },
     {
       companyName: 'Personal',
@@ -89,7 +93,8 @@ const WorkExperiences: React.FC = () => {
           description: "This was the first app I ever launched to the play store. It was a digitized version of the skate dice. The concept is that one would 'roll' the dice and based on how the dice land a skate trick would be produced from the outcome. It has since been taken down but as my first Play Store app, it is something I am proud of.",
           links: []
         },
-      ]
+      ],
+      isProfessional: false
     },
     {
       companyName: 'Personal',
@@ -100,11 +105,13 @@ const WorkExperiences: React.FC = () => {
           description: "I have many hobby projects, some of which are open source. I find it fulfilling to know things I create may benifit others even if in small ways. You can find them on my public Github profile.",
           links: [{ title: "Github profile", link: "https://github.com/korkie9" }, { link: "https://crates.io/crates/zmove", title: "Crate Package" }, { link: "https://crates.io/crates/zcopy", title: "Crate Package" }]
         },
-      ]
+      ],
+      isProfessional: false
     },
   ];
 
   const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [professional, setProfessional] = useState<any>(true);
 
   const showProject = (projectId: number) => {
     const project = workExperiences.flatMap(exp => exp.projects).find(p => p.id === projectId);
@@ -119,7 +126,24 @@ const WorkExperiences: React.FC = () => {
     <div className='flex flex-col items-center p-8'>
 
       <h2 className={`text-2xl font-bold mb-4 text-gray-900 ${novaRound.className}`}>Work Experience</h2>
-      {workExperiences.map((experience, index) => (
+      {/* Tab Section */}
+
+      <nav className="rounded-md flex justify-center items-center bg-gray-800 p-2 text-white pl-4 pr-4">
+        <ul className='flex flex-row lg:flex-row w-full justify-center items-center h-full' >
+          <li className="flex-1 mb-2 w-full border-r-2 pr-8 justify-center" >
+            <button className="hover:text-blue-400" onClick={() => { setProfessional(true) }}>Professional</button>
+          </li>
+          <li className="flex-1 mb-2 w-full border-l-1 justify-center pl-10 pr-2">
+            <button className="hover:text-blue-400" onClick={() => { setProfessional(false) }}>Personal</button>
+          </li>
+        </ul>
+      </nav>
+      {/* Tab Section */}
+      <div className={`w-full bg-black`}>
+
+
+      </div>
+      {workExperiences.filter(x => x.isProfessional == professional).map((experience, index) => (
         <div key={index} className='w-full'>
           {experience.projects.map((project, projectIndex) => (
             <div key={project.id} >
