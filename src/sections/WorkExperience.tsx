@@ -1,4 +1,10 @@
 import { motion } from 'framer-motion';
+import { Iceberg, Nova_Round } from 'next/font/google'
+
+const iceberg = Iceberg({ subsets: ['latin'], weight: "400" })
+
+const novaRound = Nova_Round({ subsets: ['latin'], weight: "400" })
+
 
 import { useState } from 'react';
 
@@ -56,7 +62,7 @@ const WorkExperiences: React.FC = () => {
       projects: [
         {
           id: 4,
-          title: 'Volks Wagen Financial Services',
+          title: 'Volks Wagen',
           description: 'VWFS needed an app for users who wanted to know if they qualified for vehicle finance. For this app I was mostly responsible for developing the frontend of the progressive web app.',
           links: [{ link: "https://quickapp.co.za/", title: "Website" }]
         },
@@ -112,18 +118,18 @@ const WorkExperiences: React.FC = () => {
   return (
     <div className='flex flex-col items-center p-8'>
 
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">Work Experience</h2>
+      <h2 className={`text-2xl font-bold mb-4 text-gray-900 ${novaRound.className}`}>Work Experience</h2>
       {workExperiences.map((experience, index) => (
         <div key={index} className='w-full'>
           {experience.projects.map((project, projectIndex) => (
             <div key={project.id} >
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="w-full h-12 m-1 border rounded-md shadow-lg transition-transform transform"
+                className="w-full h-12 m-1 rounded-md shadow-md transition-transform transform"
                 onClick={() => showProject(project.id)}
               >
                 <div className="p-4 w-full">
-                  <h4 className="text-lg mb-1 text-gray-700">{project.title}</h4>
+                  <h4 className={` ${iceberg.className} text-lg mb-1 text-gray-100`}>{project.title}</h4>
                 </div>
               </motion.div>
               {selectedProject && selectedProject.id === project.id && (
@@ -134,18 +140,18 @@ const WorkExperiences: React.FC = () => {
                   className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-80 flex justify-center items-center overflow-auto z-50"
                 >
                   <div className="max-w-lg mx-auto p-8 bg-white bg-opacity-90 shadow-lg rounded-lg">
-                    <h4 className="text-md font-semibold mb-4 text-blue-700">{selectedProject.title}</h4>
-                    <p className="text-gray-700">{selectedProject.description}</p>
+                    <h4 className={` ${novaRound.className} text-md font-semibold mb-4 text-yellow-800`}>{selectedProject.title}</h4>
+                    <p className={`${iceberg.className} text-gray-700`}>{selectedProject.description}</p>
                     <ul className="flex mt-4 flex-col">
                       {selectedProject.links.map((item: Link) => {
                         return (
-                          <a key={item.title} href={item.link} className=" text-blue-700">{item.title}</a>
+                          <a key={item.title} href={item.link} className={` text-yellow-600 underline ${iceberg.className}`}>{item.title}</a>
                         )
                       })}
                     </ul>
                     <button
                       onClick={handleProjectClose}
-                      className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition-colors duration-300"
+                      className={`mt-4 bg-yellow-900 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition-colors duration-300 ${iceberg.className}`}
                     >
                       Close
                     </button>
