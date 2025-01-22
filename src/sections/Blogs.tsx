@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Iceberg, Nova_Round } from 'next/font/google'
