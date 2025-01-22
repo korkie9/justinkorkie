@@ -4,22 +4,27 @@ import { SiNeovim, SiTypescript, SiNestjs, SiMysql, SiExpress, SiLua } from "rea
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FcLinux } from "react-icons/fc";
 import { FaGolang } from "react-icons/fa6";
+import { Iceberg, Nova_Round, Rubik_Glitch } from 'next/font/google'
+
+const rubikGlitch = Rubik_Glitch({ subsets: ['latin'], weight: "400" })
+const iceberg = Iceberg({ subsets: ['latin'], weight: "400" })
+const novaRound = Nova_Round({ subsets: ['latin'], weight: "400" })
 
 const Intro: React.FC = () => {
 
   return (
     <>
       <div className="text-center mb-2">
-        <h1 className="text-3xl font-bold mt-4 text-gray-800">Justin Korkie</h1>
-        <p className="text-lg text-gray-600">Software Engineer</p>
+        <h1 className={` ${rubikGlitch.className} text-5xl font-bold mt-4 text-gray-900`}>Justin Korkie</h1>
+        <p className={`text-2xl text-gray-800 ${novaRound.className}`}>Software Engineer</p>
       </div>
       <div className="text-center mb-8 p-8">
-        <p className="text-lg text-gray-800 mb-2">
+        <p className={`text-xl text-gray-300 mb-2 ${iceberg.className}`}>
           Hi, I&apos;m Justin Korkie, a passionate software engineer with a focus on building
           robust and scalable applications. With 5 years of experience,
           I&apos;ve worked with various technologies on a range of projects, always striving for excellence in both code quality and user experience.
         </p>
-        <div className="grid grid-cols-6 sm:grid-cols-2 lg:grid-cols-8 gap-4 text-gray-600 items-center justify-center p-4 pt-8 lg:text-2xl text-9xl">
+        <div className="grid grid-cols-6 sm:grid-cols-2 lg:grid-cols-8 gap-4 text-yellow-200 items-center justify-center p-4 pt-8 lg:text-2xl text-9xl">
           <div className="text-2xl">
             <DiAngularSimple />
           </div>
