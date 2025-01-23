@@ -9,7 +9,7 @@ const iceberg = Iceberg({ subsets: ['latin'], weight: "400" })
 const novaRound = Nova_Round({ subsets: ['latin'], weight: "400" })
 
 const Blogs: React.FC = () => {
-  const [blogPaths, setBlogPaths] = useState<string[]>(['editors', 'dsfsdf'])
+  const [blogPaths, setBlogPaths] = useState<string[]>([])
 
   useEffect(() => {
     const getBlogNames = async () => {
