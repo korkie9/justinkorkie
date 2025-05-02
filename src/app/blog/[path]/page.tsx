@@ -22,9 +22,13 @@ const Blog: React.FC = () => {
   return (
     <>
       {mdxSource && path &&
-        <div className="markdown-body lg:p-20 p-5 min-h-screen">
+        <div className="markdown-body lg:p-20 p-5 min-h-screen ">
           <Link className='markdown ' style={{ backgroundColor: '#0d1117' }} href={'/'}><ArrowLeftCircle style={{ fontSize: 20 }} /></Link>
-          <MDXRemote {...mdxSource} />
+          <div className='flex justify-center w-full'>
+            <div className="max-w-3xl">
+              <MDXRemote {...mdxSource} />
+            </div>
+          </div>
         </div>
       }
     </>
